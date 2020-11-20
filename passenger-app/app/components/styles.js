@@ -5,6 +5,7 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: "#FFF",
     paddingTop: Platform.OS === "android" ? 25 : 0,
+    padding: 10,
   },
 
   navbarContainer: {
@@ -23,20 +24,41 @@ export default StyleSheet.create({
   },
 
   homeHeader: {
-    padding: 10,
     backgroundColor: "#000",
   },
 
   homeTitle: {
     color: "#fff",
-    fontSize: 18,
+    fontSize: 22,
+    marginBottom: 5,
   },
+
   homeInputField: {
     backgroundColor: "white",
-    height: 40,
+    height: 50,
     borderColor: "black",
     borderWidth: 1,
-    marginVertical: 5,
-    padding: 5,
+    marginBottom: 10,
+    padding: 10,
+    fontSize: 20,
+  },
+
+  //Login styles
+
+  loginContainer: {
+    justifyContent: "center",
+    backgroundColor: "#000",
+  },
+
+  button: {
+    fontSize: 20,
+    backgroundColor: "#007aff",
+    padding: 10,
+    alignItems: "center",
+  },
+
+  buttonText: {
+    color: "white",
+    fontSize: 20,
   },
 });
