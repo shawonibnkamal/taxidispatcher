@@ -1,64 +1,74 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#FFF",
-    paddingTop: Platform.OS === "android" ? 25 : 0,
+  padding: {
     padding: 10,
   },
 
-  navbarContainer: {
+  container: {
     flex: 1,
-    justifyContent: "flex-end",
+    paddingTop: Platform.OS === "android" ? 25 : 0,
   },
 
-  navbar: {
+  // Navbar
+
+  navbarContainer: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-between",
   },
 
-  navbarButtonContainer: {
-    flex: 1,
+  navbarTitle: {
+    fontSize: 18,
+    color: "#49565c",
   },
+
+  navbarMenu: {
+    backgroundColor: "white",
+  },
+
+  // Home
 
   homeHeader: {
-    backgroundColor: "#000",
+    padding: 10,
   },
 
   homeTitle: {
-    color: "#fff",
-    fontSize: 22,
     marginBottom: 5,
   },
 
   homeInputField: {
     backgroundColor: "white",
     height: 50,
-    borderColor: "black",
+    borderColor: "#d4ecfa",
     borderWidth: 1,
     marginBottom: 10,
     padding: 10,
-    fontSize: 20,
+    borderRadius: 5,
+  },
+
+  appButtonContainer: {
+    elevation: 8,
+    backgroundColor: "#2da0fc",
+    borderRadius: 5,
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+  },
+  appButtonText: {
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase",
   },
 
   //Login styles
+  loginTitle: {
+    color: "#49565c",
+    marginBottom: 5,
+  },
 
   loginContainer: {
     justifyContent: "center",
-    backgroundColor: "#000",
-  },
-
-  button: {
-    fontSize: 20,
-    backgroundColor: "#007aff",
     padding: 10,
-    alignItems: "center",
-  },
-
-  buttonText: {
-    color: "white",
-    fontSize: 20,
   },
 });

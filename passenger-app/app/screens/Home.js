@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, TextInput } from "react-native";
+import { Text, View, TextInput, TouchableOpacity } from "react-native";
 import Navbar from "../components/Navbar";
 import styles from "../components/styles";
 import DismissKeyboard from "../components/DismissKeyboard";
@@ -11,8 +11,8 @@ export default function WelcomeScreen({ navigation }) {
   return (
     <DismissKeyboard>
       <View style={styles.container}>
-        <View style={styles.homeHeader}>
-          <Text style={styles.homeTitle}>Enter your destination</Text>
+        <Navbar navigation={navigation} />
+        <View style={(styles.padding, styles.homeHeader)}>
           <TextInput
             style={styles.homeInputField}
             onChangeText={(text) => onChangeHomeLocation(text)}
@@ -25,8 +25,10 @@ export default function WelcomeScreen({ navigation }) {
             value={destinationLocation}
             placeholder="Enter destination"
           />
+          <TouchableOpacity style={styles.appButtonContainer}>
+            <Text style={styles.appButtonText}>Call a cab</Text>
+          </TouchableOpacity>
         </View>
-        <Navbar navigation={navigation} />
       </View>
     </DismissKeyboard>
   );
